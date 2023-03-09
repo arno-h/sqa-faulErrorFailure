@@ -17,6 +17,12 @@ public class TestFaultTwo {
     }
 
     @Test
+    public void testReturnsLastPosition() {
+        int pos = FaultTwo.findLast(new int[] {3, 2, 5, 2, 8, 9}, 2);
+        Assert.assertEquals(3, pos);
+    }
+
+    @Test
     public void testNumberNotFound() {
         int pos = FaultTwo.findLast(new int[] {3, 5, 8, 7}, 2);
         Assert.assertEquals(-1, pos);
